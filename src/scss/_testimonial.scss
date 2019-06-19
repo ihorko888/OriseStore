@@ -1,0 +1,82 @@
+.testimonial {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #3e3f41;
+    border-bottom: 1px solid white;
+    overflow: hidden;
+
+    &-slider {
+        color: #ffffff;
+        text-align: center;
+
+        img {
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+
+        p {
+            margin-bottom: 40px;
+            font-family: $fontDroid;
+            font-size: 14px;
+            font-style: italic;
+            line-height: 30px;
+            letter-spacing: 0.35px;
+        }
+        span {
+            margin-bottom: 20px;
+            font-family: $fontPoppins;
+            font-size: 16px;
+            font-weight: 400;
+            text-transform: uppercase;
+            small {
+                display: block;
+                font-size: 10px;
+                font-style: italic;
+                line-height: 18px;
+            }
+        }
+    }
+
+    .slick-dots li.slick-active button:before {
+        opacity: .75;
+        color: white;
+    }
+    .slick-dots li button:before {
+        font-size: 50px;
+    }
+    .slick-next:before, .slick-prev:before{
+        content: none;
+    }
+    .slick-initialized .slick-slide {
+        outline: none;
+    }
+    .slick-dots {
+        bottom: -50px;
+    }
+    .slick-track {
+        width: 100%;
+    }
+
+}
+.testimonial-brand {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    .row {
+        width: 100%;
+        img {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonial-slider {
+        p {
+            font-size: 8px;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+    }
+}
