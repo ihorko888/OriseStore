@@ -74,6 +74,9 @@ $('.scrollToSec').click(function () {
     let getElement = $(this).attr('href');
     if ($(getElement).length) {
       let getOffset = $(getElement).offset().top;
+
+      $('.nav-menu').removeClass('menu_active');
+      $('.menu-link').removeClass('menu-link-active');
       $('html,body').animate({
         scrollTop:getOffset
       },400);
