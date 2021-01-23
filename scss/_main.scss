@@ -1,0 +1,182 @@
+.slider-item-img1 {
+    background: url(../img/main/mainbg.jpg) center no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.slider-item-img2 {
+    background: url(../img/main/mainbg1.jpg) center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: -1;
+    }
+}
+.slider-item-img3 {
+    background: url(../img/main/main-bg2.jpg) center no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.slider {
+    height: 100vh;
+}
+.slider-item {
+    outline: none;
+}
+.slider img {
+    width: 100%;
+    max-height: 100vh;
+}
+
+.slider .text {
+    position: absolute;
+    text-align: center;
+    top: 55%;
+    color: #fff;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.slider h2 {
+    color: #ffffff;
+    font-family: $fontAdvent;
+    font-size: 90px;
+    font-weight: 700;
+    line-height: 80px;
+    margin-bottom: 20px;
+}
+.slider p {
+    display: inline-block;
+    width: 80%;
+    color: #ffffff;
+    font-family: $fontDroid;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 30px;
+    letter-spacing: 0.4px;
+    margin-bottom: 40px;
+}
+.slider a {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    color: #ffffff;
+    font-family: $fontPoppins;
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    outline: none;
+    
+    
+}
+
+.slider .slick-prev {
+    left: 50px;
+    width: 50px;
+    height: 50px;
+    z-index: 5555;
+    background-color: #282828;
+    border-radius: 50%;
+    transition: all .2s ease;
+    &:hover {
+        background-color: $colorGold;
+    }
+}
+.slider .slick-next {
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    z-index: 5555;
+    background-color: #282828;
+    border-radius: 50%;
+    transition: all .2s ease;
+    &:hover {
+        background-color: $colorGold;
+    }
+}
+.slider .slick-prev:before, .slider .slick-next:before {
+    font-family: 'slick';
+    font-size: 15px;
+    line-height: 1;
+    opacity: .75;
+}
+
+
+@media (max-width: 720px) {
+    .slider {
+        .text {
+            h2 {
+                font-size: 50px;
+            }
+            p {
+                font-size: 16px;
+            }
+            a {
+                font-size: 10px;
+                padding: 4px 18px;
+            }
+        }
+    }
+    .slider .slick-prev {
+        left: 25px;
+    }
+    .slider .slick-next {
+        right: 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .slider {
+        .text {
+            h2 {
+                font-size: 30px;
+            }
+            p {
+                font-size: 12px;
+            }
+            a {
+                font-size: 10px;
+                padding: 4px 18px;
+            }
+        }
+    }
+}
+
+
+.buttonSvg {
+    display: block;
+    margin: auto;
+    width: 170px;
+    height: 50px;   
+    text-align: center;
+    line-height: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: color .7s;
+    &:hover a {
+        color: darken(#fff, 20%);
+        transition: color .7s;
+    }
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    svg rect {
+        stroke: #fff;
+        stroke-width: 2;
+        transition: 0.8s;
+        stroke-dasharray: 400, 0;
+    }
+    &:hover svg rect {
+        stroke: darken(#fff, 20%);
+        stroke-width: 6;
+        stroke-dasharray: 38, 285;
+        stroke-dashoffset: 38;
+    }
+}
